@@ -6,12 +6,13 @@ Portfolio
 - [Game Jam Game](#3-bullets)
 - [2D Platformer](#2d-platformer-demo)
 # Game Engine - Kaffe3D
-Game Engine that allows player to walk around 3D scenes that are built in its edit mode. Written in C++. Libraries used: OpenGL for rendering, Assimp for 3D model importing, and OpenAL for audio. Players movement is based off a simple physics system with sliding collisions.
+Game Engine that allows player to walk around 3D scenes that are built within edit mode. Written in C++. Libraries used: OpenGL for rendering, Assimp for 3D model importing, and OpenAL for audio. Players movement is based off a simple physics system with sliding collisions.
 
 ## In-Game Footage
-https://github.com/ZackDG/Portfolio/assets/35718778/1d2b1fd5-e967-44d5-9fe9-1f0558818dca
+https://github.com/ZackDG/Portfolio/assets/35718778/d30a6265-d04b-4f65-addb-0fabbf2c1f55
 
 More Footage on [Youtube](https://youtu.be/VsGoCJzwUf8)
+
 
 ## Editor Footage
 https://github.com/ZackDG/Portfolio/assets/35718778/da3a9a33-60ac-4801-ba60-81b34c8da989
