@@ -4,7 +4,7 @@
 - [Ray-Plane Intersection - C++](#finding-ray-plane-intersection)
 # Modular Tower Defense Events - C\#
 Towers have event callbacks that invoke any necessary methods for modules that needs it. This allows modules to have their own game logic contained within themselves and only requiring a small amount of code to touch other systems.
-Certain specific modules can have their own method calls, or it could be made more general with base classes and inheritance.
+Specific modules can have their own method calls, or it could be made more general with base classes and inheritance.
 
 ``` C#
     /// <summary>
