@@ -5,6 +5,7 @@ Zack DeGraw's Projects
 - [Ocean Shader](#ocean-shader)
 - [Game Jam Game](#3-bullets)
 - [2D Platformer](#2d-platformer-demo)
+- [Code Samples](#code-samples)
 # Game Engine - Kaffe3D
 Game Engine that allows player to walk around 3D scenes that are built within edit mode. Written in C++. Libraries used: OpenGL for rendering, Assimp for 3D model importing, and OpenAL for audio. Players movement is based off a simple physics system with sliding collisions.
 
@@ -50,3 +51,5 @@ Available on [Itch.io](https://kaffelon.itch.io/3bullets)
 A platformer project I was working on in 2020.
 ![platformer 2](https://github.com/ZackDG/Portfolio/assets/35718778/84ad44ec-5c08-46dc-8e13-2e2e7e084367)
 Available on [Itch.io](https://kaffelon.itch.io/platformer-demo)
+
+# [Code Samples](https://github.com/ZackDG/Portfolio/blob/main/CodeSamples/CODESAMPLES.md)
