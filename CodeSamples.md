@@ -1,3 +1,9 @@
+# Code Samples
+- [Median of Two Sorted Arrays - C++](#median-of-two-sorted-arrays---c++)
+- [Tower Defense](#modular-tower-defense)
+- [Ocean Shader](#ocean-shader)
+- [Game Jam Game](#3-bullets)
+- [2D Platformer](#2d-platformer-demo)
 # Median of Two Sorted Arrays - C++
 Code for finding the median of two sorted arrays in O Log time. Begins at findMedianSortedArrays method at bottom of block.
 ``` C++
@@ -265,6 +271,37 @@ Certain specific modules can have their own method calls, or it could be made mo
         }
     }
 ```
+# Finding Ray-Plane Intersection
+Used in Kaffe3D Engine for clicking objects in edit mode.
+``` C++
+// Finds the intersection between a line segment and a plane.
+// @param[in] p0 Starting point of line segment.
+// @param[in] p1 End point of line segment.
+// @param[in] normal Normal vector of the plane.
+// @param[in] planePoint any point on the plane.
+std::tuple<bool, glm::vec3> Physics::LineSegIntersectPlane(glm::vec3 p0, glm::vec3 p1, glm::vec3 normal, glm::vec3 planePoint)
+{
+	glm::vec3 lineDir = glm::normalize(p1-p0);
+	float dotLineNorm = glm::dot(normal, lineDir);
 
+	// Only care about planes facing the ray (Determined by negative dot product).
+	if (dotLineNorm < -1e-6)
+	{
+		// We solve for the collision point by putting the ray in parametric form (StartingPoint + Direction * t = intersection)
+		// A line segment on the plane can formed from two points on the plane. The dot product of this line and the plane normal is zero since they are parallel.
+		// One point on the plane will be the intersection, which we can substitute with our parametric form ray.
+		// We solve for t then plug t back into the ray equation.
+		
+		// After algebra
+		float t = glm::dot(planePoint - p0, normal) / glm::dot(lineDir, normal);
 
+		if(t > 1e-6)
+			return std::tuple<bool,glm::vec3>(true, p0 + (t * lineDir));
+		else
+			return std::tuple<bool, glm::vec3>(false, glm::vec3(0));
+	}
+	else
+		return std::tuple<bool, glm::vec3>(false, glm::vec3(0));
+}
 
+```
