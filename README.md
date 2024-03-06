@@ -53,3 +53,5 @@ A platformer project I was working on in 2020.
 Available on [Itch.io](https://kaffelon.itch.io/platformer-demo)
 
 # [Code Samples](https://github.com/ZackDG/Portfolio/blob/main/CodeSamples/CODESAMPLES.md)
+
+Click the link above to go to code samples.
