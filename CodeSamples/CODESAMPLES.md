@@ -1,9 +1,52 @@
 # Code Samples
-- [Median of Two Sorted Arrays - C++](#median-of-two-sorted-arrays---c)
 - [Tower Defense Events - C#](#modular-tower-defense-events---c)
-- [Ray-Plane Intersection](#finding-ray-plane-intersection)
-- [Game Jam Game](#3-bullets)
-- [2D Platformer](#2d-platformer-demo)
+- [Median of Two Sorted Arrays - C++](#median-of-two-sorted-arrays---c)
+- [Ray-Plane Intersection - C++](#finding-ray-plane-intersection)
+# Modular Tower Defense Events - C\#
+Towers have event callbacks that invoke any necessary methods for any module that needs it. This allows modules to have their own game logic contained within themselves and only requiring a small amount of code to touch other systems.
+Certain specific modules can have their own method calls, or it could be made more general with base classes and inheritance.
+
+``` C#
+    /// <summary>
+    /// Event callback invoked when the tower's base object creates a new TDObject. Sends necessary information
+    /// to any triggers that will use it. (Used for triggers such as On Hit).
+    /// </summary>
+    /// <param name="obj">Tower's Base Object</param>
+    void BaseObjectCreatedCallback(GameObject obj){
+        foreach(GameObject module in AdditionalModules){
+            if(module.gameObject.GetComponent<Trigger>() != null){
+                Trigger triggerModule = module.gameObject.GetComponent<Trigger>();
+                if(triggerModule is TriggerOnHit){
+                    (triggerModule as TriggerOnHit).SetTriggeringObject(obj);
+                }
+                else if(triggerModule is TriggerOnBleedDeath){
+                    (triggerModule as TriggerOnBleedDeath).SetTriggeringObject(obj);
+                }
+            }
+        }    
+    }
+    /// <summary>
+    /// Callback when tower attacks to begin any triggers that start on attack.
+    /// </summary>
+    void BaseAttackCallback(){
+        if(TowerAnimator != null){
+            TowerAnimator.OnAttack();
+        }
+        audioSource.PlayDelayed(AttackAudioDelaySeconds);
+        foreach(GameObject module in AdditionalModules){
+            if(module.gameObject.GetComponent<Trigger>() != null){
+                Trigger triggerModule = module.gameObject.GetComponent<Trigger>();   
+                if(triggerModule is TriggerOnAttack){
+                    (triggerModule as TriggerOnAttack).OnAttack();
+                }
+            }
+            if(module.gameObject.GetComponent<BurstTrigger>() != null){
+                module.gameObject.GetComponent<BurstTrigger>().OnAttack();
+            }
+        }
+    }
+```
+
 # Median of Two Sorted Arrays - C++
 Code for finding the median of two sorted arrays in O Log time. Begins at findMedianSortedArrays method at bottom of block.
 ``` C++
@@ -227,52 +270,9 @@ public:
 
 Solution available on [Github](https://github.com/ZackDG/MedianOfTwoSortedArrays/blob/main/MedianOfArrays/MedianOfArrays.cpp) and [Leet Code](https://leetcode.com/submissions/detail/1190908838/).
 
-# Modular Tower Defense Events - C\#
-Towers have event callbacks that invoke any necessary methods for any module that needs it. This allows modules to have their own game logic contained within themselves and only requiring a small amount of code to touch other systems.
-Certain specific modules can have their own method calls, or it could be made more general with base classes and inheritance.
-
-``` C#
-    /// <summary>
-    /// Event callback invoked when the tower's base object creates a new TDObject. Sends necessary information
-    /// to any triggers that will use it. (Used for triggers such as On Hit).
-    /// </summary>
-    /// <param name="obj">Tower's Base Object</param>
-    void BaseObjectCreatedCallback(GameObject obj){
-        foreach(GameObject module in AdditionalModules){
-            if(module.gameObject.GetComponent<Trigger>() != null){
-                Trigger triggerModule = module.gameObject.GetComponent<Trigger>();
-                if(triggerModule is TriggerOnHit){
-                    (triggerModule as TriggerOnHit).SetTriggeringObject(obj);
-                }
-                else if(triggerModule is TriggerOnBleedDeath){
-                    (triggerModule as TriggerOnBleedDeath).SetTriggeringObject(obj);
-                }
-            }
-        }    
-    }
-    /// <summary>
-    /// Callback when tower attacks to begin any triggers that start on attack.
-    /// </summary>
-    void BaseAttackCallback(){
-        if(TowerAnimator != null){
-            TowerAnimator.OnAttack();
-        }
-        audioSource.PlayDelayed(AttackAudioDelaySeconds);
-        foreach(GameObject module in AdditionalModules){
-            if(module.gameObject.GetComponent<Trigger>() != null){
-                Trigger triggerModule = module.gameObject.GetComponent<Trigger>();   
-                if(triggerModule is TriggerOnAttack){
-                    (triggerModule as TriggerOnAttack).OnAttack();
-                }
-            }
-            if(module.gameObject.GetComponent<BurstTrigger>() != null){
-                module.gameObject.GetComponent<BurstTrigger>().OnAttack();
-            }
-        }
-    }
-```
 # Finding Ray-Plane Intersection
 Used in Kaffe3D Engine for clicking objects in edit mode.
+Full Engine source code available on [Github](https://github.com/ZackDG/Kaffe3D)
 ``` C++
 // Finds the intersection between a line segment and a plane.
 // @param[in] p0 Starting point of line segment.
