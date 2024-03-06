@@ -1,7 +1,7 @@
 # Code Samples
 - [Median of Two Sorted Arrays - C++](#median-of-two-sorted-arrays---c++)
-- [Tower Defense](#modular-tower-defense)
-- [Ocean Shader](#ocean-shader)
+- [Tower Defense Events - C#](#modular-tower-defense-events-/-callbacks---c#)
+- [Ray-Plane Intersection](#finding-ray-plane-intersection)
 - [Game Jam Game](#3-bullets)
 - [2D Platformer](#2d-platformer-demo)
 # Median of Two Sorted Arrays - C++
