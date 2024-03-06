@@ -1,6 +1,6 @@
 # Code Samples
 - [Median of Two Sorted Arrays - C++](#median-of-two-sorted-arrays---c)
-- [Tower Defense Events - C#](#modular-tower-defense-events---c#)
+- [Tower Defense Events - C#](#modular-tower-defense-events---c)
 - [Ray-Plane Intersection](#finding-ray-plane-intersection)
 - [Game Jam Game](#3-bullets)
 - [2D Platformer](#2d-platformer-demo)
