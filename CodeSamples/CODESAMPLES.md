@@ -49,6 +49,8 @@ Specific modules can have their own method calls, or it could be made more gener
 
 # Median of Two Sorted Arrays - C++
 Code for finding the median of two sorted arrays in O Log time. Begins at findMedianSortedArrays method at bottom of block.
+
+Solution available on [Github](https://github.com/ZackDG/MedianOfTwoSortedArrays/blob/main/MedianOfArrays/MedianOfArrays.cpp) and [Leet Code](https://leetcode.com/submissions/detail/1190908838/).
 ``` C++
 class Solution {
 public:
@@ -267,8 +269,6 @@ public:
     }
 };
 ```
-
-Solution available on [Github](https://github.com/ZackDG/MedianOfTwoSortedArrays/blob/main/MedianOfArrays/MedianOfArrays.cpp) and [Leet Code](https://leetcode.com/submissions/detail/1190908838/).
 
 # Finding Ray-Plane Intersection
 Used in Kaffe3D Engine for clicking objects in edit mode.
