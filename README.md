@@ -9,6 +9,8 @@ Zack DeGraw's Projects
 # Game Engine - Kaffe3D
 Game Engine that allows player to walk around 3D scenes that are built within edit mode. Written in C++. Libraries used: OpenGL for rendering, Assimp for 3D model importing, and OpenAL for audio. Players movement is based off a simple physics system with sliding collisions.
 
+Full Engine source code available on [Github](https://github.com/ZackDG/Kaffe3D)
+
 ## In-Game Footage
 https://github.com/ZackDG/Portfolio/assets/35718778/d30a6265-d04b-4f65-addb-0fabbf2c1f55
 
