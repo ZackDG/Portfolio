@@ -1,6 +1,6 @@
 # Code Samples
 - [Median of Two Sorted Arrays - C++](#median-of-two-sorted-arrays---c)
-- [Tower Defense Events - C#](#modular-tower-defense-events---c\#)
+- [Tower Defense Events - C#](#modular-tower-defense-events---c#)
 - [Ray-Plane Intersection](#finding-ray-plane-intersection)
 - [Game Jam Game](#3-bullets)
 - [2D Platformer](#2d-platformer-demo)
@@ -227,7 +227,7 @@ public:
 
 Solution available on [Github](https://github.com/ZackDG/MedianOfTwoSortedArrays/blob/main/MedianOfArrays/MedianOfArrays.cpp) and [Leet Code](https://leetcode.com/submissions/detail/1190908838/).
 
-# Modular Tower Defense Events - C\#
+# Modular Tower Defense Events - C#
 Towers have event callbacks that invoke any necessary methods for any module that needs it. This allows modules to have their own game logic contained within themselves and only requiring a small amount of code to touch other systems.
 Certain specific modules can have their own method calls, or it could be made more general with base classes and inheritance.
 
