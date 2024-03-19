@@ -40,12 +40,12 @@ https://github.com/ZackDG/Portfolio/assets/35718778/0eae9dd0-758d-44b2-8f13-6c0c
 https://github.com/ZackDG/Portfolio/assets/35718778/bd49137a-afff-476e-983c-0cf684887c60
 
 # Ocean Shader
-Ocean shader created using Fractal Brownian Motion with sine waves.
+Ocean shader created using Fractal Brownian Motion with sine waves. Lighting on waves is created by obtaining the waves normal from the derivative, and implementing a fresnel effect.
 ![OceanShader](https://github.com/ZackDG/Portfolio/assets/35718778/0c279b79-2d78-4041-ac17-82bcbba3a49e)
 View on [Shadertoy](https://www.shadertoy.com/view/DtByWW)
 
 # 3 Bullets
-A game created in 2020 for Mini Jam 46. A real-time puzzle game about finding thieves within a crowd. Lighting on waves is created by obtaining the waves normal from the derivative, and implementing a fresnel effect.
+A game created in 2020 for Mini Jam 46. A real-time puzzle game about finding thieves within a crowd. 
 ![3 Bullets](https://github.com/ZackDG/Portfolio/assets/35718778/7cd04a95-6e05-41cc-8803-7e1907b91b19)
 Available on [Itch.io](https://kaffelon.itch.io/3bullets)
 
