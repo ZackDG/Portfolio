@@ -1,6 +1,7 @@
 # Code Samples
 - [Tower Defense Events - C#](#modular-tower-defense-events---c)
 - [Median of Two Sorted Arrays - C++](#median-of-two-sorted-arrays---c)
+- [Add Two Numbers - C++](#add-two-numbers---c)
 - [Ray-Plane Intersection - C++](#finding-ray-plane-intersection)
 # Modular Tower Defense Events - C\#
 Towers have event callbacks that invoke any necessary methods for modules that needs it. This allows modules to have their own game logic contained within themselves and only requiring a small amount of code to touch other systems.
@@ -270,6 +271,49 @@ public:
 };
 ```
 
+#Add Two Numbers - C++
+
+Solution for adding two numbers that are elements in a linked list.
+View full prompt on [Leetcode](https://leetcode.com/problems/add-two-numbers/description/).
+View my Solution on [Leetcode](https://leetcode.com/submissions/detail/1204207528/).
+``` C++
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        ListNode* sumList = new ListNode();
+        ListNode* currentNode = sumList;
+        int remainder = 0;
+        // Go through both of our lists, adding one pair of numbers at a time.
+        // Save the remainder to be added on the next iteration of the loop if
+        // the value goes over ten.
+        while(l1 != nullptr || l2 != nullptr){
+            int stepSum = 0;
+            if(l1 != nullptr){
+                stepSum += l1->val;
+                l1 = l1->next;
+            }
+            if(l2 != nullptr){
+                stepSum += l2->val;
+                l2 = l2->next;
+            }
+
+            int newVal = (stepSum + remainder) % 10;
+            ListNode* newNode = new ListNode(newVal);
+            currentNode->next = newNode;
+            currentNode = newNode;
+
+            if(stepSum + remainder > 9)
+                remainder = 1;
+            else
+                remainder = 0;
+        }
+        // If we still have a remainder at the end, its our last node
+        if(remainder > 0){
+            ListNode* newNode = new ListNode(remainder);
+            currentNode->next = newNode;
+        }
+        sumList = sumList->next;
+        return sumList;
+    }
+```
 # Finding Ray-Plane Intersection
 Used in Kaffe3D Engine for clicking objects in edit mode.
 Full Engine source code available on [Github](https://github.com/ZackDG/Kaffe3D)
