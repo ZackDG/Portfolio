@@ -2,9 +2,9 @@ Zack DeGraw's Projects
 ========================
 - [Game Engine](#game-engine---kaffe3d)
 - [Tower Defense](#modular-tower-defense)
-- [Ocean Shader](#ocean-shader)
 - [Game Jam Game](#3-bullets)
 - [2D Platformer](#run-and-punch-platformer-demo)
+- [Ocean Shader](#ocean-shader)
 - [Code Samples](#code-samples)
 # Game Engine - Kaffe3D
 Game Engine that allows player to walk around 3D scenes that are built within edit mode. Written in C++. Libraries used: OpenGL for rendering, Assimp for 3D model importing, and OpenAL for audio. Players movement is based off a simple physics system with sliding collisions.
@@ -39,11 +39,6 @@ https://github.com/ZackDG/Portfolio/assets/35718778/0eae9dd0-758d-44b2-8f13-6c0c
 ## Projectile Stress Test
 https://github.com/ZackDG/Portfolio/assets/35718778/bd49137a-afff-476e-983c-0cf684887c60
 
-# Ocean Shader
-Ocean shader created using Fractal Brownian Motion with sine waves. Lighting on waves is created by obtaining the waves normal from the derivative, and implementing a fresnel effect.
-![OceanShader](https://github.com/ZackDG/Portfolio/assets/35718778/0c279b79-2d78-4041-ac17-82bcbba3a49e)
-View on [Shadertoy](https://www.shadertoy.com/view/DtByWW)
-
 # 3 Bullets
 A game created in 2020 for Mini Jam 46. A real-time puzzle game about finding thieves within a crowd. 
 ![3 Bullets](https://github.com/ZackDG/Portfolio/assets/35718778/7cd04a95-6e05-41cc-8803-7e1907b91b19)
@@ -53,6 +48,11 @@ Available on [Itch.io](https://kaffelon.itch.io/3bullets)
 An early 2D platformer project I was working on in 2020.
 ![platformer 2](https://github.com/ZackDG/Portfolio/assets/35718778/84ad44ec-5c08-46dc-8e13-2e2e7e084367)
 Available on [Itch.io](https://kaffelon.itch.io/platformer-demo)
+
+# Ocean Shader
+Ocean shader created using Fractal Brownian Motion with sine waves. Lighting on waves is created by obtaining the waves normal from the derivative, and implementing a fresnel effect.
+![OceanShader](https://github.com/ZackDG/Portfolio/assets/35718778/0c279b79-2d78-4041-ac17-82bcbba3a49e)
+View on [Shadertoy](https://www.shadertoy.com/view/DtByWW)
 
 # [Code Samples](https://github.com/ZackDG/Portfolio/blob/main/CodeSamples/CODESAMPLES.md)
 
